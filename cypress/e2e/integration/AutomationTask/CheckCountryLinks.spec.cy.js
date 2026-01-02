@@ -10,6 +10,6 @@ describe('CheckGlobalLink', () => {
       popupdialog.clickCloseButton();
       redirectbutton.clickRedirectButton();
       cookiesDialog.acceptCookies();
-      globallinksmenue.clickGlobalLinks();
+      globallinksmenue.clickCountryLinks();
     })
   })

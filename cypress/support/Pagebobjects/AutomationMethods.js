@@ -85,6 +85,9 @@ class AutomationMethods{
             }
         })
     }
+    checkText(element,text){
+        cy.get(element).should('contain',text)
+    }
 
 }
 export const automationmethods = new AutomationMethods();

@@ -1,8 +1,12 @@
 import { automationmethods } from "../Pagebobjects/AutomationMethods";
+import { cookiesDialog } from "./CookiesDialog";
+import { popupdialog } from "./PopupDialog";
+import { redirectbutton } from "./RedirectButton";
+import { banner } from "./Banner";
 
 class GlobalLinksMenue{
     constructor(){
-        this.GlobalLinksBtn = "span:has(> i[aria-label='Select Country Website'])";
+        this.GlobalLinksBtn = "span[class='outer lang-current']";
     }
 
     clickGlobalLinksButton() {
@@ -10,43 +14,29 @@ class GlobalLinksMenue{
         automationmethods.click(this.GlobalLinksBtn)
     }
 
-    clickGlobalLinks() {
-            var counter = 0;
-            cy.fixture('countries.json').then((countries) => {
-                for (counter in countries.countries) {
-                    if (counter <= 11) {
-                        //Calls the Method to click the Global Links Button
+    clickCountryLinks() {
+            var counter = 1;
+            cy.fixture('localizations.json').then((countries) => {
+                countries.countries.forEach(country => {
+                      //Calls the Method to click the Global Links Button
                         globallinksmenue.clickGlobalLinksButton()
 
                         //Click Country Specific Link
-                        automationmethods.firstclick("ul[id='menu-location-menu']>li>a[href*='"+countries.countries[counter].domain+"']")
+                        automationmethods.firstclick("ul[id='menu-location-menu']>li>a[href*='"+country.domain+"']")
 
                         //Check if the new url is called
-                        automationmethods.verifyPageLoaded('https://www.sogeti.' + countries.countries[counter].domain + '/')
+                        automationmethods.verifyPageLoaded(country.start+ '' + country.domain + '' + country.end)
 
-                        //Navigate back
-                        automationmethods.goBack()
-
-                        //Check the current url
-                        automationmethods.verifyPageLoaded('https://www.sogeti.' + countries.countries[0].domain + '/')
-                    }
-                    else {
-                        //Calls the Method to click the Global Links Button
-                        globallinksmenue.clickGlobalLinksButton()
-
-                        //Click Country Specific Link
-                        automationmethods.firstclick("ul[id='menu-location-menu']>li>a[href*='"+countries.countries[counter].domain+"']")
-
-                        //Check if the new url is called
-                        automationmethods.verifyPageLoaded('https://www.' + countries.countries[counter].domain + '.sogeti.com/')
-
-                        //Navigate back
-                        automationmethods.goBack()
-
-                        //Check the current url
-                        automationmethods.verifyPageLoaded('https://www.sogeti.' + countries.countries[0].domain + '/')
-                    }
-                }
+                        //Check text
+                        banner.verifyBannerLoaded()
+                        banner.verifyBannerText(country.localization)
+                        
+                        //Accept Cookies
+                        popupdialog.clickCloseButton()
+                        redirectbutton.clickRedirectButton()
+                        cookiesDialog.acceptCookies()
+                    
+                });
             })
         }
 }

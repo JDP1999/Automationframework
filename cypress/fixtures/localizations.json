@@ -1,0 +1,76 @@
+{
+    "countries": [
+        {
+            "domain": "be",
+            "start":"https://www.sogeti.",
+            "end":"",
+            "localization": "Making value through tech"
+        },
+        {
+            "domain": "fi",
+            "start":"https://www.sogeti.",
+            "end":"",
+            "localization": "Making value through tech"
+        },
+        {
+            "domain": "us",
+            "start":"https://www.sogeti.",
+            "end":"",
+            "localization": "Making value through tech"
+        },
+        {
+            "domain": "de",
+            "start":"https://www.sogeti.",
+            "end":"",
+            "localization": "Mehrwert durch Technologie."
+        },
+        {
+            "domain": "ie",
+            "start":"https://www.sogeti.",
+            "end":"",
+            "localization": "Making value through tech"
+        },
+        {
+            "domain": "lu",
+            "start":"https://www.sogeti.",
+            "end":"",
+            "localization": "Making value through tech"
+        },
+        {
+            "domain": "no",
+            "start":"https://www.sogeti.",
+            "end":"",
+            "localization": "Skaper verdi gjennom teknologi"
+        },
+        {
+            "domain": "nl",
+            "start":"https://www.sogeti.",
+            "end":"",
+            "localization": "We make technology work"
+        },
+        {
+            "domain": "es",
+            "start":"https://www.sogeti.",
+            "end":"",
+            "localization": "Creando valor a través de la tecnología."
+        },
+        {
+            "domain": "se",
+            "start":"https://www.sogeti.",
+            "end":"",
+            "localization": "Vi är “Valuemakers”"
+        },
+        {
+            "domain": "uk",
+            "start":"https://www.sogeti.",
+            "end":"",
+            "localization": "Making value through tech"
+        },
+        {
+             "domain": "fr",
+             "start":"https://www.",
+             "end":".sogeti.com",
+             "localization": "Créer de la valeur grâce à la technologie"
+        }
+    ]
+}
