@@ -24,7 +24,7 @@ class AutomationMethods{
         //Prepare for interaction with element
         automationmethods.prepareforAction(element)
         //Hover over the element
-        cy.get(element).trigger('mouseenter')
+        cy.get(element).first().trigger('mouseenter')
     }
 
     sendText(element,text){

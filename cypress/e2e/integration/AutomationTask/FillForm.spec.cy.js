@@ -13,15 +13,6 @@ describe('FillForm', () => {
       cookiesDialog.acceptCookies();
       contactusbutton.clickContactUsButton();
       contactusbutton.verifyPageLoaded();
-      contactpage.enterFirstname();
-      contactpage.enterLastname();
-      contactpage.enterEmail();
-      contactpage.enterMobilenumber();
-      contactpage.enterMessage();
-      contactpage.verifyCheckboxUnchecked();
-      contactpage.checkCheckbox();
-      contactpage.verifyCheckboxChecked();
-      contactpage.handleSlider();
-      contactpage.verifyErrorMessageDisplayed();
+      contactpage.fillForm();
     })
   })

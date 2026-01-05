@@ -1,5 +1,4 @@
-import { servicespage } from '../../../support/Pagebobjects/Servicespage'
-import { endtoendsolutionspage } from '../../../support/Pagebobjects/EndToEndSolutionsPage'
+import { automationpage } from '../../../support/Pagebobjects/AutomationPage';
 import { automationmethods } from "../../../support/Pagebobjects/AutomationMethods";
 import { header } from '../../../support/Pageelements/Header'
 import { redirectbutton } from '../../../support/Pageelements/RedirectButton';
@@ -13,12 +12,13 @@ describe('CheckAutomationPage', () => {
     popupdialog.clickCloseButton();
     redirectbutton.clickRedirectButton();
     cookiesDialog.acceptCookies();
-    header.hoverButton();
-    header.verifyButtonHovered();
-    header.clickServicesButton();
-    header.verifyNewUrlLoaded();
-    servicespage.clickEndtoEndSolutionsButton();
-    endtoendsolutionspage.clickAutomation();
-    endtoendsolutionspage.verifyPageLoaded();
+    header.hoverServicesButton();
+    header.verifyServicesButtonHovered();
+    header.hoverEndToEndSolutionsSubmenu();
+    header.verifyEndToEndSubmenuHovered();
+    header.hoverAutomationSubmenu();
+    header.verifyAutomationSubmenuHovered();
+    header.clickAutomationSubmenu();
+    automationpage.verifyPageLoaded();
   })
 })
