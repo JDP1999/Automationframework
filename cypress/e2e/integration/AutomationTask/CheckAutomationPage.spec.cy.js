@@ -6,7 +6,7 @@ import { popupdialog } from '../../../support/Pageelements/PopupDialog';
 import { cookiesDialog } from '../../../support/Pageelements/CookiesDialog';
 
 describe('CheckAutomationPage', () => {
-  it('Clicks Links on the Sogeti side', () => {
+  it('Checks the links in the services submenue', () => {
     automationmethods.loadPage('/')
     automationmethods.verifyPageLoaded('/')
     popupdialog.clickCloseButton();

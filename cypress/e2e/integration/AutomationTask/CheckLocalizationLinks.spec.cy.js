@@ -3,8 +3,8 @@ import { globallinksmenue } from '../../../support/Pageelements/GlobalLinksMenue
 import { redirectbutton } from '../../../support/Pageelements/RedirectButton'
 import { popupdialog } from '../../../support/Pageelements/PopupDialog'
 import { cookiesDialog } from '../../../support/Pageelements/CookiesDialog'
-describe('CheckGlobalLink', () => {
-    it('Asserts that the global links are working', () => {
+describe('CheckLocalizations', () => {
+    it('Asserts that the links for the different localizations are working', () => {
       automationmethods.loadPage('/')
       automationmethods.verifyPageLoaded('/')
       popupdialog.clickCloseButton();
