@@ -2,7 +2,7 @@ import { automationmethods } from "../Pagebobjects/AutomationMethods";
 
 class Banner{
     constructor(){
-        this.Banner="div[class='banner-title']"
+        this.Banner="h1[class='banner-heading']"
     }
 
     //Actions
