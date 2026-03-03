@@ -10,7 +10,7 @@ class ContactPage {
         this.Email="input[placeholder='E-mail address']";
         this.Mobile="input[placeholder='Phone number']";
         this.Message="textarea[placeholder='Your Message']";
-        this.Slider="div[id='slider']";
+        this.Slider="input[id='slider-submit-_mf_827986_1177']";
         this.Checkbox="input[type='checkbox']";
         this.ErrorMessage="div[class='mf_form__errors']";
     }
